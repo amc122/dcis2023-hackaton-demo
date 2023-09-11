@@ -1,0 +1,28 @@
+________________________________________________________________________
+
+Solution to
+"""
+ERROR: Can not perform a '--user' install. User site-packages are not visible in this virtualenv.
+"""
+
+1. Go to the `pyvenv.cfg` file in the Virtual environment folder
+2. Set the `include-system-site-packages` to `true` and save the change
+3. Reactivate the virtual environment.
+________________________________________________________________________
+
+Solution to
+"""
+[...]
+File "/home/hackaton/Desktop/hackaton-dcis2023/bluetooth2mqtt/env/lib/python3.9/site-packages/paho/mqtt/client.py", line 979, in connect_async
+    if port <= 0:
+TypeError: '<=' not supported between instances of 'str' and 'int'
+"""
+Specify `username` keyword argument
+client = TBDeviceMqttClient("127.0.0.1", username="A1_TEST_TOKEN")
+
+________________________________________________________________________
+
+Configure HC-05 connection on raspberry pi
+https://dev.to/ivanmoreno/how-to-connect-raspberry-pi-with-hc-05-bluetooth-module-arduino-programm-3h7a
+________________________________________________________________________
+
